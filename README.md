@@ -6,6 +6,10 @@ Files stay on your own computer and hosting. The register does not certify a sup
 
 ![Complete example](docs/preview.png)
 
+## Live demo
+
+[Try Supplier Document Register](https://web-design-aberdeen.github.io/supplier-document-register/). The demo runs in your browser; entered data is not uploaded by the tool. GitHub provides the hosting and handles request logs.
+
 ## Start locally
 
 Requires Node.js 22 or later. No runtime dependencies or account required.
