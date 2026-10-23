@@ -1,0 +1,47 @@
+{
+  "supplier": "Northline Engineering / fictional supplier",
+  "asOf": "2026-10-23",
+  "documents": [
+    {
+      "id": "capabilities",
+      "title": "Supplier capability overview",
+      "url": "https://example.com/capability.pdf",
+      "document_type": "Capability statement",
+      "version": "2",
+      "owner": "Content editor",
+      "review_due": "2027-01-10",
+      "public": true
+    },
+    {
+      "id": "quality",
+      "title": "Quality policy summary",
+      "url": "https://example.com/quality.pdf",
+      "document_type": "Policy",
+      "version": "1",
+      "owner": "",
+      "review_due": "2026-09-01",
+      "public": true
+    },
+    {
+      "id": "insurance",
+      "title": "Insurance overview",
+      "url": "https://example.com/insurance.pdf",
+      "document_type": "Overview",
+      "version": "1",
+      "owner": "Operations editor",
+      "review_due": "2026-12-01",
+      "expires_on": "2026-10-01",
+      "public": true
+    },
+    {
+      "id": "private-internal",
+      "title": "INTERNAL SECRET EXAMPLE",
+      "url": "https://example.com/internal.pdf",
+      "document_type": "Internal",
+      "version": "1",
+      "owner": "Private owner",
+      "review_due": "2026-12-01",
+      "public": false
+    }
+  ]
+}

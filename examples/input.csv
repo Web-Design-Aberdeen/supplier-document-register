@@ -1,0 +1,5 @@
+"id","title","url","document_type","version","owner","review_due","public","expires_on"
+"capabilities","Supplier capability overview","https://example.com/capability.pdf","Capability statement","2","Content editor","2027-01-10","true",""
+"quality","Quality policy summary","https://example.com/quality.pdf","Policy","1","","2026-09-01","true",""
+"insurance","Insurance overview","https://example.com/insurance.pdf","Overview","1","Operations editor","2026-12-01","true","2026-10-01"
+"private-internal","INTERNAL SECRET EXAMPLE","https://example.com/internal.pdf","Internal","1","Private owner","2026-12-01","false",""

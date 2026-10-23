@@ -1,0 +1,54 @@
+{
+  "title": "Northline Engineering / fictional supplier document register",
+  "summary": "3 public documents. 1 private records excluded, including their identifiers. Review dates do not certify credentials.",
+  "documents": [
+    {
+      "id": "capabilities",
+      "title": "Supplier capability overview",
+      "url": "https://example.com/capability.pdf",
+      "document_type": "Capability statement",
+      "version": "2",
+      "review_due": "2027-01-10",
+      "expires_on": null,
+      "owner": "Content editor"
+    },
+    {
+      "id": "quality",
+      "title": "Quality policy summary",
+      "url": "https://example.com/quality.pdf",
+      "document_type": "Policy",
+      "version": "1",
+      "review_due": "2026-09-01",
+      "expires_on": null,
+      "owner": null
+    },
+    {
+      "id": "insurance",
+      "title": "Insurance overview",
+      "url": "https://example.com/insurance.pdf",
+      "document_type": "Overview",
+      "version": "1",
+      "review_due": "2026-12-01",
+      "expires_on": "2026-10-01",
+      "owner": "Operations editor"
+    }
+  ],
+  "issues": [
+    {
+      "code": "owner",
+      "message": "Assign a review owner",
+      "source": "quality"
+    },
+    {
+      "code": "review",
+      "message": "Document review is overdue; this is not an expiry judgement",
+      "source": "quality"
+    },
+    {
+      "code": "expiry",
+      "message": "Supplied expiry date has passed; confirm current status",
+      "source": "insurance"
+    }
+  ],
+  "markdown": "- Supplier capability overview (Capability statement, 2): https://example.com/capability.pdf; review due 2027-01-10\n- Quality policy summary (Policy, 1): https://example.com/quality.pdf; review due 2026-09-01\n- Insurance overview (Overview, 1): https://example.com/insurance.pdf; review due 2026-12-01"
+}

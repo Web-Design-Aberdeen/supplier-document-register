@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supplier Document Register example structure",
+  "description": "Structural guide to the supplied example. Runtime validation enforces supported states, publication gates and cross-field rules.",
+  "type": "object",
+  "properties": {
+    "supplier": {
+      "type": "string"
+    },
+    "asOf": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "review_due": {
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "expires_on": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "url",
+          "document_type",
+          "version",
+          "owner",
+          "review_due",
+          "public"
+        ]
+      }
+    }
+  },
+  "required": [
+    "supplier",
+    "asOf",
+    "documents"
+  ]
+}
