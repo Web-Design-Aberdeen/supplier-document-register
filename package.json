@@ -1,6 +1,6 @@
 {
   "name": "supplier-document-register",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Build a practical list of capability information, project evidence and documents to prepare for your website.",
   "type": "module",
   "private": false,
