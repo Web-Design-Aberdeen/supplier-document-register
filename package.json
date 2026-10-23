@@ -1,7 +1,7 @@
 {
   "name": "supplier-document-register",
-  "version": "0.1.0",
-  "description": "Build a clear supplier download register with document owners, versions and review dates.",
+  "version": "0.2.0",
+  "description": "Build a practical list of capability information, project evidence and documents to prepare for your website.",
   "type": "module",
   "private": false,
   "license": "MIT",

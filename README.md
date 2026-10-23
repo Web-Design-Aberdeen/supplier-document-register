@@ -1,68 +1,49 @@
-# Supplier Document Register
+# Supplier Website Readiness Planner
 
-Supplier Document Register turns an approved document list into a readable website downloads section. It also produces a review queue so each document has an owner and a clear next check date.
+Build a practical list of capability information, project evidence and documents to prepare for your website.
 
-Files stay on your own computer and hosting. The register does not certify a supplier's credentials. Maintained by [Aberdeen Web Design](https://webdesignaberdeen.uk/), operated by JW Digital Services Ltd.
+**For Aberdeen suppliers and service firms. No coding knowledge needed.**
 
-![Complete example](docs/preview.png)
+[Open the free tool](https://web-design-aberdeen.github.io/supplier-document-register/) · [See a fictional worked example](https://web-design-aberdeen.github.io/supplier-document-register/examples/customer-output.html)
 
-## Live demo
+![Desktop preview](docs/preview.png)
 
-[Try Supplier Document Register](https://web-design-aberdeen.github.io/supplier-document-register/). The demo runs in your browser; entered data is not uploaded by the tool. GitHub provides the hosting and handles request logs.
+## How to use it
 
-## Start locally
+1. Open the tool in your browser. No installation or account is needed.
+2. Use your own business details in the labelled fields, or choose **Try a fictional example**.
+3. Choose **Build my readiness plan** and review the result.
+4. Adjust your answers, then copy the result, download a text file or choose **Print / Save PDF**.
 
-Requires Node.js 22 or later. No runtime dependencies or account required.
+A buyer-information plan with specific gaps to fill before publishing.
+
+## What to expect
+
+Think about what a prospective buyer needs to understand before making an enquiry. You do not need to upload any documents.
+
+This organises your information. It does not verify certifications, approve supplier status or assess procurement compliance.
+
+Your answers are processed in the browser tab. They are not uploaded, emailed or saved by the tool. Refreshing or closing the tab clears them. Save your result before leaving. GitHub provides hosting and handles normal request logs. Example details are fictional, not customer results.
+
+## Design and maintenance
+
+The interface uses the colours, typography and visual treatment of [Aberdeen Web Design](https://webdesignaberdeen.uk/). The tool is maintained by Aberdeen Web Design, operated by JW Digital Services Ltd. The commercial website is a separate project.
+
+## For developers
+
+The customer tool uses native HTML controls and small browser modules, with no runtime framework. Its planning or calculation rules are in `src/customer.js`; presentation helpers are in `src/customer-ui.js`.
 
 ```sh
-npm ci
+npm ci --ignore-scripts
 npm test
 npm run build
 npm run serve
 ```
 
-Open http://127.0.0.1:4173/ for the complete local demonstration. Browser examples do not upload or persist entered data. The optional development server binds to loopback only.
+Open the local address printed by the server. `npm run build:pages` prepares the static GitHub Pages artifact. Tests cover the customer rules and output escaping.
 
-## Input and output
+The original v0.1 developer helpers remain in `src/index.js` for compatibility, with their original examples. They are not needed to use the customer tool. The existing repository name and Pages URL are retained so earlier links keep working.
 
-Supply supplier, asOf and documents: id, title, url, document_type, version, owner, review_due, public (boolean). Optional expires_on is different from review_due. Private records never enter publication output.
+## Licence and feedback
 
-Use [examples/input.json](examples/input.json) as the complete input contract. Compare the generated [JSON result](examples/output.json), [Markdown report](examples/output.md) and [complete HTML](examples/output.html). The demo is in [demo/index.html](demo/index.html). It needs the local server for JavaScript modules. HTML reports can be opened as standalone files.
-
-```sh
-node cli.mjs examples/input.json --format json
-node cli.mjs examples/input.json --format html --output report.html
-node cli.mjs examples/input.json --format md --output report.md
-```
-
-Flat collections can also be imported with `--csv data.csv --context context.json --key items` (replace `items` with the documented collection). Nested structures use JSON. See `node cli.mjs --help`.
-
-## Worked example
-
-Use a fictional engineering supplier with a capability statement, a quality policy, an insurance overview and one private internal document. Include a superseded duplicate version and a record without a review owner. The private document must appear only in the local maintenance report, never the public HTML or public example export. Use entirely synthetic files and example.com links.
-
-All supplied example records are synthetic. No clients, outcomes, current professional advice or real service availability are represented by them. Keep real records private and review output before sharing it.
-
-## Checks
-
-- Private records are excluded from every public output, including hidden data, metadata and generated search indexes.
-- Duplicate IDs fail visibly. Version changes do not replace unrelated records.
-- Dates have an explicit format and deterministic test clock. Missing expiry and expired documents are different states.
-- Unsafe link schemes and markup in CSV fields cannot inject executable HTML.
-- Download lists work at 320 px, by keyboard and without JavaScript. A real file size is shown only when supplied or measured.
-
-The automated results and browser checks performed for this release are recorded in [verification.md](docs/verification.md). Manual screen-reader testing has not been performed. A passing automated check is not accessibility certification.
-
-## Contribute and maintain
-
-Use [Issues](https://github.com/Web-Design-Aberdeen/supplier-document-register/issues) for a reproducible bug and [Discussions](https://github.com/Web-Design-Aberdeen/supplier-document-register/discussions) for questions and improvements. Follow [CONTRIBUTING.md](CONTRIBUTING.md); report vulnerabilities privately using [SECURITY.md](SECURITY.md). See [CHANGELOG.md](CHANGELOG.md) for releases. Maintenance is best effort.
-
-Code, original illustrations and synthetic fixtures are MIT licensed. There is no required website backlink when reusing the resource. Commercial brand assets and third-party material are not included.
-
-## CSV example
-
-```sh
-node cli.mjs --csv examples/input.csv --context examples/context.json --key documents --format html --output csv-report.html
-```
-
-The context holds the root settings; the CSV holds the flat collection. Explicit booleans use `true` or `false`. Nested data uses JSON.
+MIT for tool code. Bundled typefaces retain their original licence notices in `demo/assets/font-licences`. [Ideas and feedback](https://github.com/Web-Design-Aberdeen/supplier-document-register/discussions/1).

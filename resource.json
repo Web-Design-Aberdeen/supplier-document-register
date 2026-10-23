@@ -3,9 +3,10 @@
   "org": "Web-Design-Aberdeen",
   "brand": "Aberdeen Web Design",
   "slug": "supplier-document-register",
-  "title": "Supplier Document Register",
+  "title": "Supplier Website Readiness Planner",
   "profile": "Supplier and professional-service websites with clear capability information. Operated by JW Digital Services Ltd.",
-  "accent": "#334d59",
-  "tint": "#edf2f3",
-  "summary": "Build a clear supplier download register with document owners, versions and review dates."
+  "accent": "#e7a62d",
+  "tint": "#e7eef3",
+  "summary": "Build a practical list of capability information, project evidence and documents to prepare for your website.",
+  "brandMark": "<svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M2 40 20 4l20 36H26L20 27l-6 13Z\" fill=\"currentColor\" stroke=\"none\"/></svg>"
 }

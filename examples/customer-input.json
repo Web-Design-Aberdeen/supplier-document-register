@@ -1,0 +1,12 @@
+{
+  "business": "Example Aberdeen Supplier",
+  "supply": "Inspection and reporting services",
+  "buyers": "Facilities teams and procurement managers",
+  "ready": [
+    "Capability summary",
+    "Current contact details"
+  ],
+  "questions": "Which areas do you cover?\nWhat information is needed for a quote?",
+  "owner": "Operations manager",
+  "limits": "Availability and scope confirmed for each project."
+}
